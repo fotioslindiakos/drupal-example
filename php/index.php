@@ -19,3 +19,7 @@ define('DRUPAL_ROOT', getcwd());
 require_once DRUPAL_ROOT . '/includes/bootstrap.inc';
 drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
 menu_execute_active_handler();
+
+print "<table>";
+printf ("<tr><td>%s</td><td>%s</td></tr>","Hash Salt",drupal_get_hash_salt());
+print "</table>";
